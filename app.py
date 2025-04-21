@@ -12,7 +12,7 @@ input_data = []
 
 with st.form("prediction_form"):
     for feature in feature_names:
-        val = st.number_input(f"{feature.replace('_', ' ').title()}", min_value=0.0)
+        val = st.number_input(f"{feature.replace('_', ' ').title()}", step=0.0001, format="%.5f")
         input_data.append(val)
     submitted = st.form_submit_button("Predict")
 
